@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap"); /*nunito*/
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap"); /*lora*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap"); /*nunito bold*/
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.topnav {
+  flex: 0 1 auto;
+  overflow: hidden;
+  border-bottom: 2px solid #979797;
+}
+
+.topnav a {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 20px 35px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Nunito", sans-serif;
+}
+
+.gallery {
+  flex: 1 1 auto;
+  margin-left: 2vw;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
