@@ -2,8 +2,8 @@
 
 # Example-Partner-Project
 
-Partner #1: Enter your name: Mr. Bartucz
-Partner #1: Enter your favorite food: Mr. Pizza
+Partner #1: Enter your name: Brad Grupczynski
+Partner #1: Enter your favorite food: Cereal
 
 Partner #2: Enter your name: Zoey Chen
 Partner #2: Enter your favorite food: Ramen
