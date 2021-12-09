@@ -12,6 +12,10 @@ body {
   flex-direction: column;
 }
 
+#button {
+  font-family: "Nunito";
+}
+
 .topnav {
   flex: 0 1 auto;
   overflow: hidden;

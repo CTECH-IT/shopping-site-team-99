@@ -12,43 +12,48 @@
   <body>
     <div class="topnav">
         <a href="#home"> <img alt="logo" src="images/getty_logo.png" width="160" height="40"></a>
+        <a href="#about" class="tab">Getty Images Pirate</a>
         <a href="#policies" class="tab">Policies</a>
         <a href="#members" class="tab">Members</a>
         <a href="#pricing" class="tab">Pricing</a>
+
       </div>
 
-<main class="col overflow-auto h-100">
+<main> 
+  <button id="button" type="button" onclick="resetcart()">Reset Cart</button>
   <!-- Gallery -->
   <div class="row">
     <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-      <a target="_blank" href="images/banff.jpeg">
-        <img src="images/banff.jpeg" class="w-100 shadow-1-strong rounded mb-4" alt="Banff" >
+      <a>
+        <img id="image1" onclick="changeimage1()" src="images/banff.jpeg" class="w-100 shadow-1-strong rounded mb-4" alt="Banff" >
       </a>
-      <a target="_blank" href="images/blue_icebergs.jpeg">
-        <img src="images/blue_icebergs.jpeg" class="w-100 shadow-1-strong rounded mb-4" alt="Blue Iceberg" >
-      </a>
-  </div>
-  
-  <div class="col-lg-4 mb-4 mb-lg-0">
-      <a target="_blank" href="images/rainbow.jpg">
-        <img src="images/rainbow.jpg" alt="Rainbow" class="w-100 shadow-1-strong rounded mb-4">
-      </a>
-      <a target="_blank" href="images/milky_way.jpeg">
-        <img src="images/milky_way.jpeg" alt="Milky Way" class="w-100 shadow-1-strong rounded mb-4">
+      <a>
+        <img id="image2" onclick="changeimage2()" src="images/blue_icebergs.jpeg" class="w-100 shadow-1-strong rounded mb-4" alt="Blue Iceberg" >
       </a>
   </div>
   
   <div class="col-lg-4 mb-4 mb-lg-0">
-    <a target="_blank" href="images/grazing_sheep.jpeg">
-      <img src="images/grazing_sheep.jpeg" alt="Grazing Sheep" class="w-100 shadow-1-strong rounded mb-4">
+      <a>
+        <img id="image3" onclick="changeimage3()" src="images/rainbow.jpg" alt="Rainbow" class="w-100 shadow-1-strong rounded mb-4">
+      </a>
+      <a>
+        <img id="image4" onclick="changeimage4()" src="images/milky_way.jpeg" alt="Milky Way" class="w-100 shadow-1-strong rounded mb-4">
+      </a>
+  </div>
+  
+  <div class="col-lg-4 mb-4 mb-lg-0">
+    <a>
+      <img id="image5" onclick="changeimage5()" src="images/grazing_sheep.jpeg" alt="Grazing Sheep" class="w-100 shadow-1-strong rounded mb-4">
     </a>
-    <a target="_blank" href="images/emerald_lake.jpeg">
-      <img src="images/emerald_lake.jpeg" alt="Emerald Lake" class="w-100 shadow-1-strong rounded mb-4">
+    <a>
+      <img id="image6" onclick="changeimage6()" src="images/emerald_lake.jpeg" alt="Emerald Lake" class="w-100 shadow-1-strong rounded mb-4">
     </a>
   </div>
 </div>
 
 </main>
+
+<script src="scripts/main.js"></script>
 
   </body>
   </html>
