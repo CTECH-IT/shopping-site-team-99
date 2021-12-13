@@ -87,3 +87,9 @@ div.desc {
   display: table;
   clear: both;
 }
+
+canvas {
+  background: #eee;
+  display: block;
+  margin: 0 auto;
+}
