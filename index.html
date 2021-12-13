@@ -12,16 +12,12 @@
   <body>
     <div class="topnav">
         <a href="#home"> <img alt="logo" src="images/getty_logo.png" width="160" height="40"></a>
-        <a href="#about" class="tab">Getty Images Pirate</a>
-        <a href="#policies" class="tab">Policies</a>
-        <a href="#members" class="tab">Members</a>
-        <a href="#pricing" class="tab">Pricing</a>
-
       </div>
 
-<main> 
-  <button id="button" type="button" onclick="resetcart()">Reset Cart</button>
+<main class="col overflow-auto h-100"> 
+  
   <!-- Gallery -->
+  <div class = "gallery">
   <div class="row">
     <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
       <a>
@@ -49,8 +45,10 @@
       <img id="image6" onclick="changeimage6()" src="images/emerald_lake.jpeg" alt="Emerald Lake" class="w-100 shadow-1-strong rounded mb-4">
     </a>
   </div>
+  
 </div>
-
+</div>
+<button id="button" type="button" onclick="resetcart()">Reset Cart</button> 
 </main>
 
 <script src="scripts/main.js"></script>
