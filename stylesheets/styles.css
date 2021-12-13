@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap"); /*lora*/
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap"); /*nunito bold*/
 
+form :focus:required:invalid {
+  border-color: #a94442;
+}
+
 html,
 body {
   height: 100%;
