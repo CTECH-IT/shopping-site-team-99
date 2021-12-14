@@ -1,3 +1,5 @@
+const SERVER_URL = 'http://saturn.rochesterschools.org:8080/json'
+
 function resetcart() {
     document.getElementById("image1").src= "images/banff.jpeg"
     document.getElementById("image2").src= "images/blue_icebergs.jpeg"
