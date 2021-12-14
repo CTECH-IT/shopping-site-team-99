@@ -16,12 +16,6 @@
       </div>
 
 <main class="col overflow-auto h-100"> 
-  <form data-coffee-order="form">
-    <div class="form-group">
-      <label for="coffeeOrder">Email</label>
-      <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" placeholder="user@company.com" required>
-    </div>
-    </form>
 
   <!-- Gallery -->
   <div class = "gallery">
@@ -54,6 +48,53 @@
   </div>
   
 </div>
+<div class="container">
+  <header>
+    <h1>Your Order</h1>
+  </header>
+  <section>
+    <div class="card card-default"> 
+      <div class="card-body">
+        <form data-coffee-order="form">
+            <div class="form-group">
+              <label for="coffeeOrder">Email</label>
+              <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" placeholder="user@company.com" required>
+            </div>
+            <!-- edit order in cart if time
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="short">
+                Short
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="tall" checked>
+                Tall
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="grande">
+                Grande
+              </label>
+            </div>
+        -->
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-secondary">Reset</button>
+        </form>
+      </div>
+    </div>
+
+        <!-- the checklist -->
+        <div class="card card-default">
+          <div class="card-body">
+            <h4>Pending Orders: </h4>
+            <div data-coffee-order="checklist"></div>
+          </div>
+        </div>
+
 </div>
   <button id="button" type="button" onclick="resetcart()">Reset Cart</button>
   <button id="button" type="button" onclick="submitcart()">Submit Order</button>
