@@ -12,7 +12,6 @@
   <body>
     <div class="topnav">
         <a href="home.html"> <img alt="logo" src="images/getty_logo.png" width="160" height="40"></a>
-        <a href="cart.html" style="float:right" > <img alt="logo" src="images/cart.jpg" width="50" height="40"></a>
       </div>
 
 <main class="col overflow-auto h-100"> 
@@ -21,28 +20,28 @@
   <div class = "gallery">
   <div class="row">
     <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-      <a>
+      <a data-image-role="trigger" data-image-url="images/banff.jpeg">
         <img id="image1" onclick="changeimage1()" src="images/banff.jpeg" class="w-100 shadow-1-strong rounded mb-4" alt="Banff" >
       </a>
-      <a>
+      <a data-image-role="trigger" data-image-url="images/blue_icebergs.jpeg">
         <img id="image2" onclick="changeimage2()" src="images/blue_icebergs.jpeg" class="w-100 shadow-1-strong rounded mb-4" alt="Blue Iceberg" >
       </a>
   </div>
   
   <div class="col-lg-4 mb-4 mb-lg-0">
-      <a>
+      <a data-image-role="trigger" data-image-url="images/rainbow.jpg">
         <img id="image3" onclick="changeimage3()" src="images/rainbow.jpg" alt="Rainbow" class="w-100 shadow-1-strong rounded mb-4">
       </a>
-      <a>
+      <a data-image-role="trigger" data-image-url="images/milky_way.jpeg">
         <img id="image4" onclick="changeimage4()" src="images/milky_way.jpeg" alt="Milky Way" class="w-100 shadow-1-strong rounded mb-4">
       </a>
   </div>
   
   <div class="col-lg-4 mb-4 mb-lg-0">
-    <a>
+    <a data-image-role="trigger" data-image-url="images/grazing_sheep.jpeg">
       <img id="image5" onclick="changeimage5()" src="images/grazing_sheep.jpeg" alt="Grazing Sheep" class="w-100 shadow-1-strong rounded mb-4">
     </a>
-    <a>
+    <a data-image-role="trigger" data-image-url="images/emerald_lake.jpeg">
       <img id="image6" onclick="changeimage6()" src="images/emerald_lake.jpeg" alt="Emerald Lake" class="w-100 shadow-1-strong rounded mb-4">
     </a>
   </div>
@@ -60,26 +59,6 @@
               <label for="coffeeOrder">Email</label>
               <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" placeholder="user@company.com" required>
             </div>
-            <!-- edit order in cart if time
-            <div class="radio">
-              <label>
-                <input type="radio" name="size" value="short">
-                Short
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="size" value="tall" checked>
-                Tall
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="size" value="grande">
-                Grande
-              </label>
-            </div>
-        -->
             
             <button type="submit" class="btn btn-primary">Submit Order</button>
             <button type="submit" class="btn btn-secondary">Reset</button>
