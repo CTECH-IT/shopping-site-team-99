@@ -12,7 +12,10 @@
     };
 
     DataStore.prototype.get = function (key) {
-        return this.data[key];
+        $.get(this.serverUrl + '?emailAddress=' + key, function (serverResponse) {
+            console.log(serverResponse);
+            cb(serverResponse);
+        });
     };
 
     DataStore.prototype.getAll = function () {
@@ -20,7 +23,7 @@
     };
 
     DataStore.prototype.remove = function(key) {
-        delete this.data[key];
+        $.ajax(this.serverUrl + '?emailAddress' + key, { type: 'DELETE' });
     };
 
     App.DataStore = DataStore;
