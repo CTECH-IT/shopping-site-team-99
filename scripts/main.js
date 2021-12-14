@@ -1,4 +1,41 @@
-const SERVER_URL = 'http://saturn.rochesterschools.org:8080/json'
+let canvas = document.getElementById("priced");
+let ctx = canvas.getContext("2d");
+let price = 0;
+(function (window) {
+    'use strict';
+
+    const FORM_SELECTOR = '[data-coffee-order="form"]';
+    const CHECKLIST_SELECTOR = '[data-coffee-order="checklist"]';
+    const SERVER_URL = 'http://saturn.rochesterschools.org:8080/json'
+    let App = window.App;
+    let Truck = App.Truck;
+    let DataStore = App.DataStore;
+    let RemoteDataStore = App.RemoteDataStore;
+    let FormHandler = App.FormHandler;
+    let CheckList= App.CheckList
+    let Validation = App.Validation;
+
+    let remoteDS = new RemoteDataStore(SERVER_URL);
+
+    let myTruck = new Truck('12345', remoteDS);
+    //find checklist that is being updated and create a checklist object
+    let checkList = new CheckList(CHECKLIST_SELECTOR);
+
+    //when checkbox is clicked, call deliverorder on mytruck
+    checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
+
+    window.myTruck = myTruck;
+
+    let formHandler = new FormHandler(FORM_SELECTOR);
+    formHandler.addSubmitHandler(function (data) {
+        myTruck.createOrder.call(myTruck, data);
+        checkList.addRow.call(checkList, data);
+    });
+    
+    console.log(formHandler);
+
+})(window);
+
 
 function resetcart() {
     document.getElementById("image1").src= "images/banff.jpeg"
@@ -71,13 +108,6 @@ document.getElementById("image6").src= "images/cart.jpg"
 console.log("Forest Mountains in cart!");
 price++;
 }
-
-
-
-let canvas = document.getElementById("priced");
-let ctx = canvas.getContext("2d");
-
-let price = 0;
 
 function addPrice() {
     ctx.font = "20px Arial";
