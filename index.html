@@ -20,36 +20,60 @@
   <!-- Gallery -->
   <div class = "gallery">
   <div class="row">
-    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-      <a data-image-role="trigger" data-image-url="images/banff.jpeg">
-        <img id="image1" onclick="changeimage1()" src="images/banff.jpeg" class="w-100 shadow-1-strong rounded mb-4" alt="Banff" >
-        <button type="button" class="btn btn-outline-secondary">Add Image to Cart</button>
+    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 ">
+      <a >
+        <img id="image1" src="images/banff.jpeg" class="w-100 shadow-1-strong rounded mb-4 thumbnail-item" alt="Banff">
+        <span class="thumbnail-title">Banff</span>
+        <div class="check">
+        <input class="form-check-input" type="checkbox" id="check1" name="image" value="banff">
+        <label class="form-check-label">Add Image to Cart</label>
+      </div>
       </a>
-      <a data-image-role="trigger" data-image-url="images/blue_icebergs.jpeg">
-        <img id="image2" onclick="changeimage2()" src="images/blue_icebergs.jpeg" class="w-100 shadow-1-strong rounded mb-4" alt="Blue Iceberg" >
-        <button type="button" class="btn btn-outline-secondary">Add Image to Cart</button>
-      </a>
-  </div>
-  
-  <div class="col-lg-4 mb-4 mb-lg-0">
-      <a data-image-role="trigger" data-image-url="images/rainbow.jpg">
-        <img id="image3" onclick="changeimage3()" src="images/rainbow.jpg" alt="Rainbow" class="w-100 shadow-1-strong rounded mb-4">
-        <button type="button" class="btn btn-outline-secondary">Add Image to Cart</button>
-      </a>
-      <a data-image-role="trigger" data-image-url="images/milky_way.jpeg">
-        <img id="image4" onclick="changeimage4()" src="images/milky_way.jpeg" alt="Milky Way" class="w-100 shadow-1-strong rounded mb-4">
-        <button type="button" class="btn btn-outline-secondary">Add Image to Cart</button>
+      <a>
+        <img id="image2" src="images/blue_icebergs.jpeg" class="w-100 shadow-1-strong rounded mb-4 thumbnail-item" alt="Blue Iceberg" >
+        <span class="thumbnail-title">Blue Icebergs</span>
+        <div class="check">
+          <input class="form-check-input" type="checkbox" id="check1" name="image" value="icebergs">
+          <label class="form-check-label">Add Image to Cart</label>
+        </div>
       </a>
   </div>
   
   <div class="col-lg-4 mb-4 mb-lg-0">
-    <a data-image-role="trigger" data-image-url="images/grazing_sheep.jpeg">
-      <img id="image5" onclick="changeimage5()" src="images/grazing_sheep.jpeg" alt="Grazing Sheep" class="w-100 shadow-1-strong rounded mb-4">
-      <button type="button" class="btn btn-outline-secondary">Add Image to Cart</button>
+      <a >
+        <img id="image3" src="images/rainbow.jpg" alt="Rainbow" class="w-100 shadow-1-strong rounded mb-4 thumbnail-item" >
+        <span class="thumbnail-title">Rainbow Mountain</span>
+        <div class="check">
+          <input class="form-check-input" type="checkbox" id="check1" name="image" value="rainbow">
+          <label class="form-check-label"> Add Image to Cart</label>
+        </div>
+      </a>
+      <a >
+        <img id="image4" src="images/milky_way.jpeg" alt="Milky Way" class="w-100 shadow-1-strong rounded mb-4 thumbnail-item" >
+        <span class="thumbnail-title">Milky Way</span>
+        <div class="check">
+          <input class="form-check-input" type="checkbox" id="check1" name="image" value="milky way">
+          <label class="form-check-label"> Add Image to Cart</label>
+        </div>
+      </a>
+  </div>
+  
+  <div class="col-lg-4 mb-4 mb-lg-0">
+    <a>
+      <img id="image5" src="images/grazing_sheep.jpeg" alt="Grazing Sheep" class="w-100 shadow-1-strong rounded mb-4 thumbnail-item">
+      <span class="thumbnail-title">Grazing Sheep</span>
+      <div class="check">
+        <input class="form-check-input" type="checkbox" id="check1" name="image" value="sheep">
+        <label class="form-check-label">Add Image to Cart</label>
+      </div>
     </a>
-    <a data-image-role="trigger" data-image-url="images/emerald_lake.jpeg">
-      <img id="image6" onclick="changeimage6()" src="images/emerald_lake.jpeg" alt="Emerald Lake" class="w-100 shadow-1-strong rounded mb-4">
-      <button type="button" class="btn btn-outline-secondary">Add Image to Cart</button>
+    <a>
+      <img id="image6" src="images/emerald_lake.jpeg" alt="Emerald Lake" class="w-100 shadow-1-strong rounded mb-4 thumbnail-item">
+      <span class="thumbnail-title">Emerald Lake</span>
+      <div class="check">
+        <input class="form-check-input" type="checkbox" id="check1" name="image" value="emerald">
+        <label class="form-check-label">Add Image to Cart</label>
+      </div>
     </a>
   </div>
   
@@ -66,34 +90,7 @@
               <label for="gettyOrder">Email</label>
               <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" placeholder="user@company.com" required>
             </div>
-<<<<<<< HEAD
-            <div class="radio">
-              <label>
-                <input type="radio" name="size" value="Lake mountains" checked>
-                <img src="images/banff.jpeg" alt="get a better browser" height=100px width='100px'>
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="size" value="Forest" checked>
-                <img src="images/emerald_lake.jpeg" alt="get a better browser">
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="size" value="Grazing" checked>
-                <img src="images/grazing_sheep.jpeg" alt="Get a better browser">
-              </label>
-            </div>
-            
-            <button type="submit" class="btn btn-primary">Submit Order</button>
-            <button type="submit" onclick="resetCart()" class="btn btn-secondary">Reset Cart</button>
-        </form>
-=======
-            <button id="button" type="submit" class="btn btn-outline-secondary">Submit Order</button>
-
         
->>>>>>> 42db777b19ece96b4a375d623844679d45428c0f
       </div>
     </div>
 
@@ -104,14 +101,9 @@
             <div data-getty-order="checklist"></div>
           </div>
         </div>
-
 </div>
-  <button id="button" type="button" onclick="resetcart()" class="btn btn-outline-secondary" >Reset Cart</button>
-  <button id="button" type="button" onclick="submitcart()" class="btn btn-outline-secondary">Submit Order</button>
-
 </main>
-
-  <canvas id="priced" width="200" height="25"></canvas>
+</form>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
   <script src="scripts/validation.js" charset="utf-8"></script>
@@ -122,6 +114,6 @@
   <script src="scripts/truck.js" charset="utf-8"></script>
   <script src="scripts/main.js" charset="utf-8"></script>
   
-</form>
+
 </body>
 </html>
