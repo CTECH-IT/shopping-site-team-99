@@ -23,27 +23,33 @@
     <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
       <a data-image-role="trigger" data-image-url="images/banff.jpeg">
         <img id="image1" onclick="changeimage1()" src="images/banff.jpeg" class="w-100 shadow-1-strong rounded mb-4" alt="Banff" >
+        <button type="button" class="btn btn-outline-secondary">Add Image to Cart</button>
       </a>
       <a data-image-role="trigger" data-image-url="images/blue_icebergs.jpeg">
         <img id="image2" onclick="changeimage2()" src="images/blue_icebergs.jpeg" class="w-100 shadow-1-strong rounded mb-4" alt="Blue Iceberg" >
+        <button type="button" class="btn btn-outline-secondary">Add Image to Cart</button>
       </a>
   </div>
   
   <div class="col-lg-4 mb-4 mb-lg-0">
       <a data-image-role="trigger" data-image-url="images/rainbow.jpg">
         <img id="image3" onclick="changeimage3()" src="images/rainbow.jpg" alt="Rainbow" class="w-100 shadow-1-strong rounded mb-4">
+        <button type="button" class="btn btn-outline-secondary">Add Image to Cart</button>
       </a>
       <a data-image-role="trigger" data-image-url="images/milky_way.jpeg">
         <img id="image4" onclick="changeimage4()" src="images/milky_way.jpeg" alt="Milky Way" class="w-100 shadow-1-strong rounded mb-4">
+        <button type="button" class="btn btn-outline-secondary">Add Image to Cart</button>
       </a>
   </div>
   
   <div class="col-lg-4 mb-4 mb-lg-0">
     <a data-image-role="trigger" data-image-url="images/grazing_sheep.jpeg">
       <img id="image5" onclick="changeimage5()" src="images/grazing_sheep.jpeg" alt="Grazing Sheep" class="w-100 shadow-1-strong rounded mb-4">
+      <button type="button" class="btn btn-outline-secondary">Add Image to Cart</button>
     </a>
     <a data-image-role="trigger" data-image-url="images/emerald_lake.jpeg">
       <img id="image6" onclick="changeimage6()" src="images/emerald_lake.jpeg" alt="Emerald Lake" class="w-100 shadow-1-strong rounded mb-4">
+      <button type="button" class="btn btn-outline-secondary">Add Image to Cart</button>
     </a>
   </div>
   
@@ -55,11 +61,12 @@
   <section>
     <div class="card card-default"> 
       <div class="card-body">
-        <form data-coffee-order="form">
+        <form data-getty-order="form">
             <div class="form-group">
-              <label for="coffeeOrder">Email</label>
+              <label for="gettyOrder">Email</label>
               <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" placeholder="user@company.com" required>
             </div>
+<<<<<<< HEAD
             <div class="radio">
               <label>
                 <input type="radio" name="size" value="Lake mountains" checked>
@@ -82,6 +89,11 @@
             <button type="submit" class="btn btn-primary">Submit Order</button>
             <button type="submit" onclick="resetCart()" class="btn btn-secondary">Reset Cart</button>
         </form>
+=======
+            <button id="button" type="submit" class="btn btn-outline-secondary">Submit Order</button>
+
+        
+>>>>>>> 42db777b19ece96b4a375d623844679d45428c0f
       </div>
     </div>
 
@@ -89,13 +101,13 @@
         <div class="card card-default">
           <div class="card-body">
             <h4>Pending Orders: </h4>
-            <div data-coffee-order="checklist"></div>
+            <div data-getty-order="checklist"></div>
           </div>
         </div>
 
 </div>
-  <button id="button" type="button" onclick="resetcart()">Reset Cart</button>
-  <button id="button" type="button" onclick="submitcart()">Submit Order</button>
+  <button id="button" type="button" onclick="resetcart()" class="btn btn-outline-secondary" >Reset Cart</button>
+  <button id="button" type="button" onclick="submitcart()" class="btn btn-outline-secondary">Submit Order</button>
 
 </main>
 
@@ -109,6 +121,7 @@
   <script src="scripts/datastore.js" charset="utf-8"></script>
   <script src="scripts/truck.js" charset="utf-8"></script>
   <script src="scripts/main.js" charset="utf-8"></script>
-
+  
+</form>
 </body>
 </html>

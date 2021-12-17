@@ -10,10 +10,16 @@ html,
 body {
   height: 100%;
 }
+<<<<<<< HEAD
 .radio {
   height: 100px;
   width: 100px;
   margin-left: 10px;
+=======
+
+.btn {
+  margin-bottom: 2vw;
+>>>>>>> 42db777b19ece96b4a375d623844679d45428c0f
 }
 
 body {

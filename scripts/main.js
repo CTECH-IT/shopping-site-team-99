@@ -1,5 +1,13 @@
 const SERVER_URL = 'http://saturn.rochesterschools.org:8080/json'
 const THUMBNAIL_LINK_SELECTOR = '[data-image-role="trigger"]'
+
+let App = window.App;
+let Truck = App.Truck;
+let DataStore = App.DataStore;
+let FormHandler = App.FormHandler;
+let CheckList = App.CheckList;
+let Validation = App.Validation;
+
 /*
 function setDetails(imageUrl, titleText) {
     'use strict';
@@ -17,7 +25,7 @@ function imageFromThumb(thumbnail) {
 
 function sendDetailsFromThumb(thumbnail) {
     'use strict';
-    setDetails(imageFromThumb(thumbnail), titleFromThumb(thumbnail));
+    setDetails(imageFromThumb(thumbnail));
 }
 
 function addThumbClickHandler(thumb) {
@@ -47,8 +55,8 @@ let price = 0;
 (function (window) {
     'use strict';
 
-    const FORM_SELECTOR = '[data-coffee-order="form"]';
-    const CHECKLIST_SELECTOR = '[data-coffee-order="checklist"]';
+    const FORM_SELECTOR = '[data-getty-order="form"]';
+    const CHECKLIST_SELECTOR = '[data-getty-order="checklist"]';
     const SERVER_URL = 'http://saturn.rochesterschools.org:8080/json'
     let App = window.App;
     let Truck = App.Truck;
