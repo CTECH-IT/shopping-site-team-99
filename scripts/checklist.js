@@ -23,11 +23,11 @@
     };
 
     //th method that adds new row to checklist
-    CheckList.prototype.addRow = function (coffeeOrder) {
+    CheckList.prototype.addRow = function (gettyOrder) {
         // remove any existing rows that match email address
-        this.removeRow(coffeeOrder.emailAddress);
+        this.removeRow(gettyOrder.emailAddress);
         //create new instance of row, using order info
-        var rowElement = new Row(coffeeOrder);
+        var rowElement = new Row(gettyOrder);
         // add new row instances $element property to the checklist
         this.$element.append(rowElement.$element);
     };
@@ -35,30 +35,32 @@
     CheckList.prototype.removeRow = function (email) {
         this.$element
         .find('[value="' + email + '"]')
-        .closest('[data-coffee-order="checkbox"]')
+        .closest('[data-getty-order="checkbox"]')
         .remove();
     };
 
     //each row is 1 outstanding order
-    function Row(coffeeOrder) {
+    function Row(gettyOrder) {
         let $div = $('<div></div>', {
-            'data-coffee-order': 'checkbox',
+            'data-getty-order': 'checkbox',
             'class': 'checkbox'
         });
     let $label = $('<label></label>');
 
         let $checkbox = $('<input></input>', {
             type: 'checkbox',
-            value: coffeeOrder.emailAddress
+            value: gettyOrder.emailAddress
         });
 
-        let description = coffeeOrder.size + ' ';
-        if (coffeeOrder.flavor) {
-            description += coffeeOrder.flavor + ' ';
+        let description = gettyOrder.size + ' ';
+        if (gettyOrder.flavor) {
+            description += gettyOrder.flavor + ' ';
         }
-        description += coffeeOrder.coffee + ', ';
-        description += ' (' + coffeeOrder.emailAddress + ')';
-        description += ' [' + coffeeOrder.strength + 'x]';
+
+        
+        description += gettyOrder.getty + ', ';
+        description += ' (' + gettyOrder.emailAddress + ')';
+        description += ' [' + gettyOrder.strength + 'x]';
 
         $label.append($checkbox);
         $label.append(description);
