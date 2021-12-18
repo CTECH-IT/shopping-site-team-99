@@ -3,7 +3,7 @@
 
     const FORM_SELECTOR = '[data-getty-order = "form"]';
     const CHECKLIST_SELECTOR = '[data-getty-order="checklist"]';
-    const SERVER_URL = 'https://coffeerun-v2-rest-api.herokuapp.com/api/coffeeorders';
+    const SERVER_URL = 'http://saturn.rochesterschools.org:8080/json';
 
     let App = window.App;
     let Truck = App.Truck;

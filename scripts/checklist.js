@@ -2,6 +2,7 @@
     'use strict';
     let App = window.App || {};
     let $ = window.jQuery;
+
     function CheckList(selector) {
         if (!selector) {
             throw new Error('No selector provided');
@@ -13,7 +14,7 @@
     }
 
     //when checkbox is clicked, get emailaddress from row
-    //andthen call func that is passed in with email as a parameter
+    //and then call func that is passed in with email as a parameter
     CheckList.prototype.addClickHandler = function(func) {
         this.$element.on('click', 'input', function (event) {
             var email = event.target.value;
@@ -52,15 +53,57 @@
             value: gettyOrder.emailAddress
         });
 
-        let description = gettyOrder.size + ' ';
-        if (gettyOrder.flavor) {
-            description += gettyOrder.flavor + ' ';
+        let description = '  Order: ';
+
+        if (gettyOrder.image1) {
+            description += gettyOrder.image1 + '; ';
         }
 
-        
-        description += gettyOrder.getty + ', ';
+        if (gettyOrder.image2) {
+            description += gettyOrder.image2 + '; ';
+        }
+
+        if (gettyOrder.image3) {
+            description += gettyOrder.image3 + '; ';
+        }
+
+        if (gettyOrder.image4) {
+            description += gettyOrder.image4 + '; ';
+        }
+
+        if (gettyOrder.image5) {
+            description += gettyOrder.image4 + '; ';
+        }
+
+        if (gettyOrder.image6) {
+            description += gettyOrder.image4 + '; ';
+        }
+
+        if (gettyOrder.image7) {
+            description += gettyOrder.image4 + '; ';
+        }
+
+        if (gettyOrder.image8) {
+            description += gettyOrder.image8 + '; ';
+        }
+
+        if (gettyOrder.image9) {
+            description += gettyOrder.image9 + '; ';
+        }
+
+        if (gettyOrder.image10) {
+            description += gettyOrder.image10 + '; ';
+        }
+
+        if (gettyOrder.image11) {
+            description += gettyOrder.image11 + '; ';
+        }
+
+        if (gettyOrder.image12) {
+            description += gettyOrder.image12 + '; ';
+        }
+
         description += ' (' + gettyOrder.emailAddress + ')';
-        description += ' [' + gettyOrder.strength + 'x]';
 
         $label.append($checkbox);
         $label.append(description);
