@@ -5,6 +5,14 @@ form :focus:required:invalid {
   border-color: #a94442;
 }
 
+.tab {
+  margin-top: 10px;
+}
+
+.right {
+  float: right;
+}
+
 .thumbnail-item:hover {
   transform: scale(1.03);
 }
@@ -48,10 +56,6 @@ body {
   flex-direction: column;
 }
 
-#button {
-  font-family: "Nunito";
-}
-
 .topnav {
   flex: 0 1 auto;
   overflow: hidden;
@@ -66,7 +70,7 @@ body {
   padding: 20px 35px;
   text-decoration: none;
   font-size: 18px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .gallery {
