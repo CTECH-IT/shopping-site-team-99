@@ -18,6 +18,8 @@
 
     let myTruck = new Truck('12345', remoteDS);
     window.myTruck = myTruck;
+
+
     
     //find the form that is being submitted and create a FormHandler object
     let formHandler = new FormHandler(FORM_SELECTOR);
@@ -33,10 +35,30 @@
         myTruck.createOrder.call(myTruck, data);
         checkList.addRow.call(checkList, data);
     });
-<<<<<<< HEAD
     
     console.log(formHandler);
+      // the remote database where we store orders
 
+  window.myTruck = myTruck;
+
+      // get all the data from the remote data store and put it in the truck
+    remoteDS.getAll(function (orders) {
+
+    // go through the orders with a loop
+    // figure out if this order belongs to you, 
+    // if it does, create a new order and then call
+
+        Object.entries(orders).forEach((entry) => {
+        const [key, value] = entry;
+        console.log(`** ${key}: ${value} **`);
+        Object.entries(value).forEach((field) => {
+            const [k, v] = field;
+            console.log(`----- ${k}: ${v}`);
+        });
+    });
+    
+
+  }); 
 })(window);
 
 function addPrice() {
@@ -44,10 +66,3 @@ function addPrice() {
     ctx.fillStyle = "Black";
     ctx.fillText("Your Total: $" + price, 5, 20);
 }
-=======
->>>>>>> 959b00fd25a0550c41032f2f8cc7ea5385ebb8ac
-
-    //add the email validator to the email input field
-    formHandler.addInputHandler(Validation.isCompanyEmail);
-
-})(window);

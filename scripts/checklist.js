@@ -25,8 +25,6 @@
 
     //th method that adds new row to checklist
     CheckList.prototype.addRow = function (gettyOrder) {
-        // remove any existing rows that match email address
-        this.removeRow(gettyOrder.emailAddress);
         //create new instance of row, using order info
         var rowElement = new Row(gettyOrder);
         // add new row instances $element property to the checklist
@@ -48,10 +46,10 @@
         });
     let $label = $('<label></label>');
 
-        let $checkbox = $('<input></input>', {
-            type: 'checkbox',
-            value: gettyOrder.emailAddress
-        });
+    let $checkbox = $('<input></input>', {
+        type: 'checkbox',
+        value: gettyOrder.emailAddress
+    });
 
         let description = '  Order: ';
 

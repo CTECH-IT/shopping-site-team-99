@@ -36,11 +36,6 @@ html,
 body {
   height: 100%;
 }
-<<<<<<< HEAD
-
-.btn {
-  margin-bottom: 2vw;
-=======
 .radio {
   height: 100px;
   width: 100px;
@@ -54,7 +49,6 @@ body {
 
 .form-check-label {
   margin-left: 0.5vw;
->>>>>>> 959b00fd25a0550c41032f2f8cc7ea5385ebb8ac
 }
 
 body {
