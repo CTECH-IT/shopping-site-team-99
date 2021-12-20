@@ -12,12 +12,19 @@
 
   <body>
     <div class="topnav">
-        <a href="home.html"> <img alt="logo" src="images/getty_logo.png" width="160" height="40"></a>
+      <span>
+        <a> <img alt="logo" src="images/getty_logo.png" width="160" height="40"></a>
+      </span>
+      <span class="right">
+        <a href="manage.html" class="tab">Manage</a>
+      </span>
       </div>
 
 <main class="col overflow-auto h-100"> 
 
-  <!-- Gallery -->
+  <form data-getty-order="form">
+  <span class="page-title">Nature & Landscape Images</span>
+
   <div class = "gallery">
   <div class="row">
     <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
@@ -52,16 +59,15 @@
       <button type="button" class="btn btn-outline-secondary">Add Image to Cart</button>
     </a>
   </div>
-  
 </div>
+
 <div class="container">
   <header>
-    <h1>Your Order</h1>
+    <h1>Submit Your Order</h1>
   </header>
   <section>
     <div class="card card-default"> 
       <div class="card-body">
-        <form data-getty-order="form">
             <div class="form-group">
               <label for="gettyOrder">Email</label>
               <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" placeholder="user@company.com" required>
@@ -71,7 +77,6 @@
         
       </div>
     </div>
-
         <!-- the checklist -->
         <div class="card card-default">
           <div class="card-body">
@@ -90,7 +95,6 @@
   <script src="scripts/datastore.js" charset="utf-8"></script>
   <script src="scripts/truck.js" charset="utf-8"></script>
   <script src="scripts/main.js" charset="utf-8"></script>
-  
-</form>
+
 </body>
 </html>

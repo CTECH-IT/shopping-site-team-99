@@ -31,7 +31,7 @@
         // make get call to server, but pass email address
         // so that it returns just one order
         // then call the function "cb" on the response
-        $.get(this.serverUrl + '/' + key, function (serverResponse) {
+        $.get(this.serverUrl + '?emailAddress=' + key, function (serverResponse) {
             console.log(serverResponse);
             cb(serverResponse);
         });
@@ -39,7 +39,7 @@
 
     RemoteDataStore.prototype.remove = function (key) {
         //call server URL using the ajax delete command
-        $.ajax(this.serverUrl + '/' + key, {
+        $.ajax(this.serverUrl + '?emailAddress=' + key, {
             type: 'DELETE' });
     };
 

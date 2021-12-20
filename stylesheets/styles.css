@@ -1,18 +1,60 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap"); /*nunito*/
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap"); /*lora*/
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap"); /*nunito bold*/
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@1,400;1,600&display=swap"); /*arimo*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap"); /*roboto*/
 
 form :focus:required:invalid {
   border-color: #a94442;
+}
+
+.tab {
+  margin-top: 10px;
+}
+
+.right {
+  float: right;
+}
+
+.thumbnail-item:hover {
+  transform: scale(1.03);
+}
+
+.thumbnail-title {
+  color: #111;
+  font-family: "Arimo", sans-serif;
+  font-size: 20px;
+  margin-bottom: 2vw;
+}
+
+.page-title {
+  color: #111;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  margin-bottom: 2vw;
+  margin-left: 2vw;
 }
 
 html,
 body {
   height: 100%;
 }
+<<<<<<< HEAD
 
 .btn {
   margin-bottom: 2vw;
+=======
+.radio {
+  height: 100px;
+  width: 100px;
+  margin-left: 10px;
+}
+
+.check {
+  margin-left: 1.5vw;
+  margin-bottom: 1vw;
+}
+
+.form-check-label {
+  margin-left: 0.5vw;
+>>>>>>> 959b00fd25a0550c41032f2f8cc7ea5385ebb8ac
 }
 
 body {
@@ -20,14 +62,11 @@ body {
   flex-direction: column;
 }
 
-#button {
-  font-family: "Nunito";
-}
-
 .topnav {
   flex: 0 1 auto;
   overflow: hidden;
   border-bottom: 2px solid #979797;
+  margin-bottom: 2vw;
 }
 
 .topnav a {
@@ -37,10 +76,11 @@ body {
   padding: 20px 35px;
   text-decoration: none;
   font-size: 18px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .gallery {
+  margin-bottom: 3vw;
   margin: 2vw;
   border: none !important;
 }

@@ -1,87 +1,39 @@
-const SERVER_URL = 'http://saturn.rochesterschools.org:8080/json'
-const THUMBNAIL_LINK_SELECTOR = '[data-image-role="trigger"]'
-
-let App = window.App;
-let Truck = App.Truck;
-let DataStore = App.DataStore;
-let FormHandler = App.FormHandler;
-let CheckList = App.CheckList;
-let Validation = App.Validation;
-
-/*
-function setDetails(imageUrl, titleText) {
-    'use strict';
-    let detailImage = document.querySelector(DETAIL_IMAGE_SELECTOR);
-    detailImage.setAttribute('src', imageUrl);
-
-    let detailTitle = document.querySelector(DETAIL_TITLE_SELECTOR);
-    detailTitle.textContent = titleText;
-}
-
-function imageFromThumb(thumbnail) {
-    'use strict'; 
-    return thumbnail.getAttribute('data-image-url');
-}
-
-function sendDetailsFromThumb(thumbnail) {
-    'use strict';
-    setDetails(imageFromThumb(thumbnail));
-}
-
-function addThumbClickHandler(thumb) {
-    'use strict';
-    thumb.addEventListener('click', function(event) {
-        event.preventDefault(); // stop browser from following href
-        setDetailsFromThumb(thumb);
-    }); 
-}
-
-function getThumbnailsArray() {
-    'use strict';
-    let thumbnails = document.querySelectorAll(THUMBNAIL_LINK_SELECTOR);
-    let thumbnailArray = [].slice.call(thumbnails); // convert Nodelist to array
-    return thumbnailArray;
-}
-
-function initializeEvents() {
-    'use strict';
-    let thumbnails = getThumbnailsArray();
-    thumbnails.forEach(addThumbClickHandler);
-}
-*/
-let canvas = document.getElementById("priced");
-let ctx = canvas.getContext("2d");
-let price = 0;
 (function (window) {
     'use strict';
 
-    const FORM_SELECTOR = '[data-getty-order="form"]';
+    const FORM_SELECTOR = '[data-getty-order = "form"]';
     const CHECKLIST_SELECTOR = '[data-getty-order="checklist"]';
-    const SERVER_URL = 'http://saturn.rochesterschools.org:8080/json'
+    const SERVER_URL = 'http://saturn.rochesterschools.org:8080/json';
+
     let App = window.App;
     let Truck = App.Truck;
     let DataStore = App.DataStore;
     let RemoteDataStore = App.RemoteDataStore;
     let FormHandler = App.FormHandler;
-    let CheckList= App.CheckList
+    let CheckList = App.CheckList;
     let Validation = App.Validation;
 
+    // the remote database where we store orders 
     let remoteDS = new RemoteDataStore(SERVER_URL);
 
     let myTruck = new Truck('12345', remoteDS);
-    //find checklist that is being updated and create a checklist object
+    window.myTruck = myTruck;
+    
+    //find the form that is being submitted and create a FormHandler object
+    let formHandler = new FormHandler(FORM_SELECTOR);
+
+    // find the checklist that is being updated and create a CheckList object 
     let checkList = new CheckList(CHECKLIST_SELECTOR);
 
-    //when checkbox is clicked, call deliverorder on mytruck
+    // when a checkbox is clicked, call "deliverOrder" on myTruck
     checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
 
-    window.myTruck = myTruck;
-
-    let formHandler = new FormHandler(FORM_SELECTOR);
+    // when the submit button is called, create the order and add a checkbox
     formHandler.addSubmitHandler(function (data) {
         myTruck.createOrder.call(myTruck, data);
         checkList.addRow.call(checkList, data);
     });
+<<<<<<< HEAD
     
     console.log(formHandler);
 
@@ -92,10 +44,10 @@ function addPrice() {
     ctx.fillStyle = "Black";
     ctx.fillText("Your Total: $" + price, 5, 20);
 }
+=======
+>>>>>>> 959b00fd25a0550c41032f2f8cc7ea5385ebb8ac
 
-function draw() {
-    ctx.clearRect(0, 0, canvas.clientWidth, canvas.height);
-    addPrice();
-}
+    //add the email validator to the email input field
+    formHandler.addInputHandler(Validation.isCompanyEmail);
 
-setInterval(draw, 10);
+})(window);
