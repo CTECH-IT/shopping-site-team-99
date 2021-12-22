@@ -43,26 +43,14 @@
 
       // get all the data from the remote data store and put it in the truck
     remoteDS.getAll(function (orders) {
-
     // go through the orders with a loop
     // figure out if this order belongs to you, 
     // if it does, create a new order and then call
-
-        Object.entries(orders).forEach((entry) => {
-        const [key, value] = entry;
-        console.log(`** ${key}: ${value} **`);
-        Object.entries(value).forEach((field) => {
-            const [k, v] = field;
-            console.log(`----- ${k}: ${v}`);
-        });
-    });
-    
-
+    for (let order of Object.values(orders)) {
+        myTruck.createOrder(order);
+       
+    }
+        
   }); 
 })(window);
 
-function addPrice() {
-    ctx.font = "20px Arial";
-    ctx.fillStyle = "Black";
-    ctx.fillText("Your Total: $" + price, 5, 20);
-}
