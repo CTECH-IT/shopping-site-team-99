@@ -2,6 +2,7 @@
     'use strict';
 
     let App = window.App || {};
+    var $ = window.jQuery;
 
     function DataStore() {
         console.log('Running the DataStore function...')
@@ -13,10 +14,7 @@
     };
 
     DataStore.prototype.get = function (key) {
-        $.get(this.serverUrl + '?emailAddress=' + key, function (serverResponse) {
-            console.log(serverResponse);
-            cb(serverResponse);
-        });
+        return this.data[key];
     };
 
     DataStore.prototype.getAll = function () {
@@ -24,7 +22,7 @@
     };
 
     DataStore.prototype.remove = function(key) {
-        $.ajax(this.serverUrl + '?emailAddress' + key, { type: 'DELETE' });
+        delete this.data[key];
     };
 
     App.DataStore = DataStore;

@@ -1,13 +1,14 @@
 (function (window) {
     'use strict';
 
-    const FORM_SELECTOR = '[data-getty-order = "form"]';
+    const FORM_SELECTOR = '[data-getty-order="form"]';
     const CHECKLIST_SELECTOR = '[data-getty-order="checklist"]';
     const SERVER_URL = 'http://saturn.rochesterschools.org:8080/json';
+    const TRUCKID = 'toby';
 
     let App = window.App;
     let Truck = App.Truck;
-    let DataStore = App.DataStore;
+    // let DataStore = App.DataStore;
     let RemoteDataStore = App.RemoteDataStore;
     let FormHandler = App.FormHandler;
     let CheckList = App.CheckList;
@@ -15,11 +16,23 @@
 
     // the remote database where we store orders 
     let remoteDS = new RemoteDataStore(SERVER_URL);
+    // let localDS = new DataStore();
 
-    let myTruck = new Truck('12345', remoteDS);
+    let myTruck = new Truck(TRUCKID, remoteDS);
     window.myTruck = myTruck;
 
-
+    // get all the data from the remote data store and put it in the truck
+    remoteDS.getAll(function (orders) {
+        // go through the orders with a loop
+        // figure out if this order belongs to you, 
+        // if it does, create a new order and then call
+        for (let order of Object.values(orders)) {
+            if (order.truck = TRUCKID) {
+                myTruck.createOrder(order);
+                console.log(order);
+            }
+        }    
+    });
     
     //find the form that is being submitted and create a FormHandler object
     let formHandler = new FormHandler(FORM_SELECTOR);
@@ -35,22 +48,15 @@
         myTruck.createOrder.call(myTruck, data);
         checkList.addRow.call(checkList, data);
     });
+
+    formHandler.addInputHandler(Validation.isCompanyEmail)
     
     console.log(formHandler);
-      // the remote database where we store orders
+    // the remote database where we store orders
 
-  window.myTruck = myTruck;
+    window.myTruck = myTruck;
+    
 
-      // get all the data from the remote data store and put it in the truck
-    remoteDS.getAll(function (orders) {
-    // go through the orders with a loop
-    // figure out if this order belongs to you, 
-    // if it does, create a new order and then call
-    for (let order of Object.values(orders)) {
-        myTruck.createOrder(order);
-       
-    }
-        
-  }); 
+
 })(window);
 

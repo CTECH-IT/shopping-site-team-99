@@ -44,12 +44,12 @@
             'data-getty-order': 'checkbox',
             'class': 'checkbox'
         });
-    let $label = $('<label></label>');
+        let $label = $('<label></label>');
 
-    let $checkbox = $('<input></input>', {
-        type: 'checkbox',
-        value: gettyOrder.emailAddress
-    });
+        let $checkbox = $('<input></input>', {
+            type: 'checkbox',
+            value: gettyOrder.emailAddress
+        });
 
         let description = '  Order: ';
 
@@ -70,15 +70,15 @@
         }
 
         if (gettyOrder.image5) {
-            description += gettyOrder.image4 + '; ';
+            description += gettyOrder.image5 + '; ';
         }
 
         if (gettyOrder.image6) {
-            description += gettyOrder.image4 + '; ';
+            description += gettyOrder.image6 + '; ';
         }
 
         if (gettyOrder.image7) {
-            description += gettyOrder.image4 + '; ';
+            description += gettyOrder.image7 + '; ';
         }
 
         if (gettyOrder.image8) {

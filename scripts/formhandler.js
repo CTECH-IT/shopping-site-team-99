@@ -17,7 +17,7 @@
         }
 
         FormHandler.prototype.addSubmitHandler = function (func) {
-            console.log('Setting the submit handler for the form...');
+            // console.log('Setting the submit handler for the form...');
             this.$formElement.on('submit', function(event) {
                 event.preventDefault();
 
@@ -27,7 +27,7 @@
                     data[item.name] = item.value;
                     console.log(item.name + ' is ' + item.value);
                 });
-                console.log(data);
+                // console.log(data);
                 func(data); // call the function that was passed in on the data 
 
                 this.reset(); // reset the form
